@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap');
+
+
+html,body{margin: 0; font-size: 16px;}
+h1,h2,h3,h4,p,figure{margin:0;}
+/* 기본값으로 들어가 있는 margin값을 없앤다 */
+ul,ol,li{
+    list-style-type:none;
+    margin:0; padding:0;
+}
+img{vertical-align: middle;}
+a{
+    color: #333;
+    text-decoration: none;
+}
+*{
+    font-family: '';
+    box-sizing: border-box;
+}
+/* 위에 적힌 모두가 css 제작에 있어 처음으로 적힌다 */
+
+
+header{
+    width:1200px; margin:0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:40px 0;
+}
+header h1{font-size: 1.8rem;} 
+header nav{}
+header nav a{
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-left:50px ;
+    display: inline-block;/*header nav a::after의 block요소를 쓰기 위해 부모에게 넣어줌 */
+}
+/* 폰트사이즈 rem의 r은 최상위 를 표현함 */
+header nav a::after{
+    content: '';
+    display: block;
+    margin: 5px auto;
+    border-bottom: 1px solid #000;
+    width: 0%;
+    transition:.5s;
+}
+header nav a:hover::after{
+    width: 100%;
+}
